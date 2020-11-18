@@ -3,18 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CV19Main"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen">
-    <Grid Width="800" Height="420" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="True" ClipToBounds="True" SnapsToDevicePixels="True">
-        <Grid.Effect>
-            <BlurEffect/>
-        </Grid.Effect>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                <GradientStop Color="#FF4C2AE6" Offset="0.01"/>
-                <GradientStop Color="#FF630A0A" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
+        xmlns:l="clr-namespace:CV19Main" xmlns:ViewModels="clr-namespace:CV19Main.ViewModels"
+        xmlns:vm="clr-namespace:CV19Main.ViewModels"
+        Title="{Binding Title}" 
+        Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid >
+        <TextBox HorizontalAlignment="Left" 
+            Height="22" Margin="24,38,0,0"
+            Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top" Width="346"/>
+
     </Grid>
 </Window>
