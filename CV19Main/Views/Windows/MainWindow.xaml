@@ -11,8 +11,8 @@
         <vm:MainWindowViewModel/>
     </Window.DataContext>
     <Grid >
-        <Slider HorizontalAlignment="Left" Margin="30"
-                VerticalAlignment="Top" Width="300"
+        <Slider HorizontalAlignment="Left" Margin="20"
+                VerticalAlignment="Top" Width="400"
                 Value="{Binding Title}"/>
 
     </Grid>
