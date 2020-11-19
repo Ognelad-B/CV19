@@ -10,10 +10,47 @@
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
-    <Grid >
-        <Slider HorizontalAlignment="Left" Margin="20"
-                VerticalAlignment="Top" Width="400"
-                Value="{Binding Title}" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight"/>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit"/>
 
-    </Grid>
+            </MenuItem>
+            <MenuItem Header="Halp">
+                <MenuItem Header="About..."/>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Text="1234" MaxWidth="300" MinWidth="150"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <ProgressBar Width="120" Height="20" Value="30"/>
+            </StatusBarItem>
+        </StatusBar>
+        <TabControl>
+            <TabItem Header="Tab 1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="29"/>
+                        <RowDefinition Height="165"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="157"/>
+                        <ColumnDefinition Width="637"/>
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Grid.Column="0" Grid.Row="0"
+                               Margin="5,7"
+                               Fill="Blue"
+                               Stroke="red"
+                               StrokeThickness="1"
+                               RadiusX="5" RadiusY="7"/>
+                    <Ellipse Grid.Column="1" Grid.Row="0"
+                             Fill="red" Stroke="Blue" StrokeThickness="3"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Tab 2"></TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>
