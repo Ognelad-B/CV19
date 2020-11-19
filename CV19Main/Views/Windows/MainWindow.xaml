@@ -13,7 +13,7 @@
     <Grid >
         <Slider HorizontalAlignment="Left" Margin="20"
                 VerticalAlignment="Top" Width="400"
-                Value="{Binding Title}"/>
+                Value="{Binding Title}" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight"/>
 
     </Grid>
 </Window>
