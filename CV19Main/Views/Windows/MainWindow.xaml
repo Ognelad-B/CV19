@@ -13,7 +13,7 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Command="" CommandParameter=""/>
 
             </MenuItem>
             <MenuItem Header="Halp">
@@ -21,8 +21,8 @@
             </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom">
-            <StatusBarItem>
-                <TextBlock Text="1234" MaxWidth="300" MinWidth="150"/>
+            <StatusBarItem MaxWidth="300" MinWidth="150">
+                <TextBlock Text="{Binding Status}"/>
             </StatusBarItem>
             <StatusBarItem>
                 <ProgressBar Width="120" Height="20" Value="30"/>
