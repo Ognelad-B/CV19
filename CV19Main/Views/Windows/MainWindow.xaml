@@ -16,7 +16,7 @@
                 <MenuItem Header="Exit" Command="" CommandParameter=""/>
 
             </MenuItem>
-            <MenuItem Header="Halp">
+            <MenuItem Header="Help">
                 <MenuItem Header="About..." Command="" CommandParameter=""/>
             </MenuItem>
         </Menu>
@@ -46,7 +46,7 @@
                                StrokeThickness="1"
                                RadiusX="5" RadiusY="7"/>
                     <Ellipse Grid.Column="1" Grid.Row="0"
-                             Fill="red" Stroke="Blue" StrokeThickness="2"/>
+                             Fill="red" Stroke="Blue" StrokeThickness="3"/>
 
                 </Grid>
             </TabItem>
