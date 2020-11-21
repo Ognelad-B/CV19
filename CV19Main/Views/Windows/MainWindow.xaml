@@ -17,7 +17,7 @@
 
             </MenuItem>
             <MenuItem Header="Halp">
-                <MenuItem Header="About..."/>
+                <MenuItem Header="About..." Command="" CommandParameter=""/>
             </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom">
