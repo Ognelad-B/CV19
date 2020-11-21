@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:l="clr-namespace:CV19Main" xmlns:ViewModels="clr-namespace:CV19Main.ViewModels"
+        xmlns:fa="http://schemas.fontawesome.com/icons/"
         xmlns:vm="clr-namespace:CV19Main.ViewModels"
         xmlns:cmd="clr-namespace:CV19Main.Infrastructure.Commands"
         Title="{Binding Title}" 
@@ -37,7 +38,15 @@
             </StatusBarItem>
         </StatusBar>
         <TabControl>
-            <TabItem Header="Tab 1">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Source=""></Image>-->
+                        <fa:ImageAwesome Icon="Regular_File" Height="13" Margin="0,0,5,0" Foreground="Red"/>
+                        <TextBlock Text="Tab 1">
+                    </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="29"/>
@@ -66,7 +75,9 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Tab 2"></TabItem>
+            <TabItem Header="Tab 2">
+                
+            </TabItem>
         </TabControl>
     </DockPanel>
 </Window>
