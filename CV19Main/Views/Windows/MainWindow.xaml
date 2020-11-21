@@ -5,15 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:l="clr-namespace:CV19Main" xmlns:ViewModels="clr-namespace:CV19Main.ViewModels"
         xmlns:vm="clr-namespace:CV19Main.ViewModels"
+        xmlns:cmd="clr-namespace:CV19Main.Infrastructure.Commands"
         Title="{Binding Title}" 
         Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.InputBindings>
+        <KeyBinding Modifiers="Ctrl" Key="Q" Command="{Binding CloseApplicationCommand}"/>
+    </Window.InputBindings>
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
-                <!--<MenuItem Header="Exit" Command="{Binding CloseApplicationCommand}" CommandParameter=""/>-->
+                <MenuItem Header="Exit" Command="{Binding CloseApplicationCommand}" CommandParameter=""/>
+                <!--<MenuItem Header="Exit"/>
+                <MenuItem.Command>
+                    <cmd:CloseApplicationCommand/>
+                </MenuItem.Command>-->
 
             </MenuItem>
             <MenuItem Header="Help">
@@ -46,7 +54,15 @@
                                StrokeThickness="1"
                                RadiusX="5" RadiusY="7"/>
                     <Ellipse Grid.Column="1" Grid.Row="0"
-                             Fill="red" Stroke="Blue" StrokeThickness="3"/>
+                             Fill="red" Stroke="Blue" StrokeThickness="3">
+                        <Ellipse.InputBindings>
+                            <MouseBinding Command="{Binding CloseApplicationCommand}"
+                                          MouseAction="LeftDoubleClick"/>
+                        </Ellipse.InputBindings>
+                    </Ellipse>
+                    <GridSplitter Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"
+                                  HorizontalAlignment="Right"
+                                  Width="4"/>
 
                 </Grid>
             </TabItem>
